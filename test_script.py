@@ -24,12 +24,7 @@ def retrieve_table_schema(conn: Connection, table_name: str):
             cursor.execute(
                 query=schema_query
             )
-            # column_names = [desc[0] for desc in cursor.description]
-            # print(f"Column names: {column_names}")
-            # list_of_dicts = [dict(row) for row in cursor.fetchall()]
-            # print(list_of_dicts)
             result = cursor.fetchall()
-            # print(result)
         conn.commit()
         return result
     
