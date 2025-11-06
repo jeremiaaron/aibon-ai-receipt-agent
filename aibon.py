@@ -17,7 +17,7 @@ from psycopg import Connection
 
 from langchain.schema.messages import AIMessage, AIMessageChunk, HumanMessage
 
-from aibon_library import DocAgent, MongoAgent
+from aibon_library import DocAgent, MongoAgent, PostgresAgent
 from ai_agent import AibonAgent
 
 st.set_page_config(page_title="AI-Bon Agent", layout="wide")
@@ -152,9 +152,9 @@ def extract_data_from_receipt(file_name: str, image_bytes):
         
 def insert_data_to_db(data: dict):
     try:
-        doc_agent = DocAgent()
+        postgres_agent = PostgresAgent()
         conn: Connection = st.session_state["pg_connection"]
-        inserted_id = doc_agent.insert_data_to_db(
+        inserted_id = postgres_agent.insert_data_to_db(
             conn=conn,
             data=data,
             logger=logger
