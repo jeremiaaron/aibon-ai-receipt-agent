@@ -51,7 +51,7 @@ jobs:
             docker run -d \
               --name aibon-app \
               --network aibon \
-              --env-file /home/${{ secrets.SSH_USER }}/Iris/coding-exercise/.env
+              --env-file /home/${{ secrets.SSH_USER }}/Iris/coding-exercise/.env \
               -p 8501:8501 \
               -v /home/${{ secrets.SSH_USER }}/Iris/coding-exercise/receipt-agent/logs:/usr/src/app/logs \
               aibon-app
