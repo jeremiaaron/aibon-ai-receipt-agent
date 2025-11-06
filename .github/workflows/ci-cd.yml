@@ -1,0 +1,57 @@
+name: AIBon CI-CD
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Generate deployment folder and prepare secrets
+        run: |
+          export DEPLOY_DIR="aibon-app-$(date +%Y%m%d%H%M%S)"
+          echo "DEPLOY_DIR=$DEPLOY_DIR" >> $GITHUB_ENV
+
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+            "mkdir -p /home/${{ secrets.SSH_USER }}/Iris/coding-exercise/$DEPLOY_DIR"
+
+      - name: Copy project files to server
+        run: |
+          rsync -avz ./ \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/${{ secrets.SSH_USER }}/Iris/coding-exercise/$DEPLOY_DIR
+
+      - name: Build and run Docker on remote server
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} bash -c "'
+            cd /home/${{ secrets.SSH_USER }}/Iris/coding-exercise/$DEPLOY_DIR
+
+            echo Building Docker image...
+            docker build -t aibon-app .
+
+            echo Stopping old container if it exists...
+            docker stop aibon-app || true
+            docker rm aibon-app || true
+
+            echo Running new container...
+            docker run -d \
+              --name aibon-app \
+              --network aibon \
+              --env-file /home/${{ secrets.SSH_USER }}/Iris/coding-exercise/.env
+              -p 8501:8501 \
+              -v /home/${{ secrets.SSH_USER }}/Iris/coding-exercise/receipt-agent/logs:/usr/src/app/logs \
+              aibon-app
+
+            echo Cleaning up all other deployments, keeping only the latest...
+            cd /home/${{ secrets.SSH_USER }}/Iris/coding-exercise/
+            ls -dt aibon-app-* | tail -n +2 | xargs rm -rf || true
+          '"
