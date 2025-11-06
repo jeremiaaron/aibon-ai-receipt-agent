@@ -47,5 +47,7 @@ def main():
     
     print(receipts_schema)
     
+    # just for GitHub actions testing
+    
 if __name__ == "__main__":
     main()
