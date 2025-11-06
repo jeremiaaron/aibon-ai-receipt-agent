@@ -53,7 +53,7 @@ jobs:
               --network coding-exercise_aibon \
               --env-file /home/${{ secrets.SSH_USER }}/Iris/coding-exercise/.env \
               -p 8501:8501 \
-              -v /home/${{ secrets.SSH_USER }}/Iris/coding-exercise/receipt-agent/logs:/usr/src/app/logs \
+              -v /home/${{ secrets.SSH_USER }}/Iris/coding-exercise/receipt-agent/logs:/app/logs \
               aibon-app
 
             echo Cleaning up all other deployments, keeping only the latest...
