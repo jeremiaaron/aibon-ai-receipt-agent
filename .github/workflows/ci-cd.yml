@@ -44,8 +44,8 @@ jobs:
             docker build -t aibon-app .
 
             echo Stopping old container if it exists...
-            docker stop aibon-app || true
-            docker rm aibon-app || true
+            docker stop aibon-app || echo "No existing container, skipping."
+            docker rm aibon-app || echo "No existing container, skipping."
 
             echo Running new container...
             docker run -d \
