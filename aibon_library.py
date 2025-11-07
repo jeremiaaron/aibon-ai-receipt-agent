@@ -77,6 +77,9 @@ class PostgresAgent():
         pass
     
     def insert_data_to_db(self, conn: Connection, data: dict, logger: Logger):
+        """
+        Insert receipt data to Postgres DB.
+        """
         try:
             with conn.cursor() as cursor:
                 insert_receipts_query = """
@@ -153,32 +156,6 @@ class PostgresAgent():
             logger.error("Error occurred when inserting data to DB.")
             logger.error(traceback.format_exc())
             return None
-        
-    
-    def retrieve_table_schema(conn: Connection, table_name: str):
-        print("Retrieving table schema")
-        try:
-            with conn.cursor() as cursor:
-                schema_query = f"""
-                    SELECT 
-                        table_name,
-                        column_name,
-                        data_type,
-                        is_nullable,
-                        column_default
-                    FROM information_schema.columns
-                    WHERE table_name = '{table_name}'
-                    ORDER BY table_name, ordinal_position;
-                """
-                cursor.execute(
-                    query=schema_query
-                )
-                result = cursor.fetchall()
-            conn.commit()
-            return result
-        
-        except Exception as e:
-            print(traceback.format_exc())
 
         
 class MongoAgent():
@@ -191,6 +168,9 @@ class MongoAgent():
         self.prompts_collection = self.db["prompts"]
         
     def get_all_chat_session_history(self, user_id: str):
+        """
+        Retrieve all chat session history (up to 15).
+        """
         session_history = list(self.chat_collection.find({
             "user_id": user_id
         }).sort("last_modified", -1).limit(15))
@@ -201,6 +181,9 @@ class MongoAgent():
         user_id: str,
         session_id: str
     ):
+        """
+        Retrieve only one chat session history.
+        """
         chat_history = self.chat_collection.find_one({"user_id": user_id, "session_id": session_id})
         return chat_history
     
@@ -210,7 +193,7 @@ class MongoAgent():
         session_id: str
     ) -> None:
         """
-        Insert a message to a fresh session.
+        Create a new chat session.
         """
         now = datetime.now()
         chat_data = {
@@ -228,6 +211,9 @@ class MongoAgent():
         user_id: str,
         session_id: str
     ) -> bool:
+        """
+        Check if a chat session already exists or not.
+        """
         sessions = list(self.chat_collection.find(
             {
                 "user_id": user_id,
@@ -306,6 +292,9 @@ class MongoAgent():
         message_id: str,
         metadata: dict
     ):
+        """
+        Update the metadata for a message (token count, model info, and other info).
+        """
         self.chat_collection.update_one(
             {
                 '_id': session_id,
@@ -321,15 +310,13 @@ class MongoAgent():
         Simple tokenizer that lowercases text, removes punctuation, and splits by whitespace.
         """
         text = text.lower()
-        text = re.sub(r'[^\w\s]', '', text)  # Remove punctuation
+        text = re.sub(r'[^\w\s]', '', text)
         tokens = text.split()
         return tokens
 
     def _partial_word_match_score(self, query, text):
         """
-        Computes a matching score based on partial word matching between the query and text.
-        For each query token, if it is found as a substring in any token from the text,
-        that counts as a match.
+        Computes a matching score based on for search chat history function.
         """
         query_tokens = self._tokenize(query)
         text_tokens = self._tokenize(text)
@@ -342,6 +329,7 @@ class MongoAgent():
                     break
         return score    
     
+    # Search chat history function, not implemented yet in the UI
     def search_chat_history(
         self,
         query: str,
@@ -373,68 +361,3 @@ class MongoAgent():
             return results[:top_k]
         else:
             return results
-        
-    def search_docs_and_chunk(
-        self,
-        docs_ref: list
-    ):
-        results = []
-        for ref in docs_ref:
-            doc = self.doc_collection.find_one(
-                {
-                    "_id": ref["doc_id"],
-                    "chunks_data.chunk_id": ref["chunk_id"]
-                },
-                {
-                    "chunks_data.$": 1,
-                    "file_metadata.file_name": 1,
-                    "file_metadata.file_path": 1
-                }
-            )
-
-            if doc:
-                chunk = doc["chunks_data"][0]
-                results.append({
-                    "doc_id": str(doc["_id"]),
-                    "file_name": doc["file_metadata"]["file_name"],
-                    "file_path": doc["file_metadata"]["file_path"],
-                    "chunk_id": chunk["chunk_id"],
-                    "chunk_text": chunk["chunk_text"],
-                    "page_number": chunk.get("page_number")
-                })
-                
-        return results
-    
-    def retrieve_prompt(
-        self,
-        prompt_key: Literal["system_prompt", "persona_prompt"]
-    ):
-        result = self.prompts_collection.find_one(
-            {
-                "_id": prompt_key
-            }
-        )
-        prompt = result[prompt_key]
-        
-        return prompt
-    
-    def update_prompt(
-        self,
-        prompt_key: Literal["system_prompt", "persona_prompt"],
-        prompt_text: str
-    ):
-        result = self.prompts_collection.update_one(
-            {
-                "_id": prompt_key
-            },
-            {
-                "$set": {
-                    prompt_key: prompt_text
-                }
-            }
-        )
-        
-        return {
-            "acknowledged": result.acknowledged,
-            "modified_count": result.modified_count
-        }

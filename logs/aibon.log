@@ -1,0 +1,242 @@
+2025-11-06 21:39:13 - INFO - Loading PostgreSQL connection...
+2025-11-06 21:39:13 - INFO - Connection completed.
+2025-11-06 21:39:36 - INFO - Loading PostgreSQL connection...
+2025-11-06 21:39:36 - INFO - Connection completed.
+2025-11-06 21:39:43 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-06 21:39:45 - INFO - Generate SQL query result: ```json
+{
+  "action": "nothing",
+  "language": "english"
+}
+```
+2025-11-06 21:39:45 - INFO - Generate SQL query result: {'action': 'nothing', 'language': 'english'}
+2025-11-06 21:39:45 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'nothing', 'language': 'english'}"}
+2025-11-06 21:39:45 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-06 21:40:04 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-06 21:40:06 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT\n  ri.item_name\nFROM receipt_items AS ri\nJOIN receipts AS r\n  ON ri.receipt_id = r.id\nWHERE\n  EXTRACT(MONTH FROM r.transaction_date) = 9;",
+  "language": "id"
+}
+```
+2025-11-06 21:40:06 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT\n  ri.item_name\nFROM receipt_items AS ri\nJOIN receipts AS r\n  ON ri.receipt_id = r.id\nWHERE\n  EXTRACT(MONTH FROM r.transaction_date) = 9;', 'language': 'id'}
+2025-11-06 21:40:06 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT\\n  ri.item_name\\nFROM receipt_items AS ri\\nJOIN receipts AS r\\n  ON ri.receipt_id = r.id\\nWHERE\\n  EXTRACT(MONTH FROM r.transaction_date) = 9;', 'language': 'id'}"}
+2025-11-06 21:40:06 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-06 21:40:06 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('Triple Treat',), ('#B1G1 Paket Reguler Sei Sapi x Sei Sapi',), ('Triple Treat',), ('Nasi Wagyu Bakar Totlah (Favourite) Sambal Totlah (Favorit). Topping Kremesan',), ('#B1G1 Paket Jumbo Sei Sapi x Sei Sapi',)]}
+2025-11-06 21:40:06 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-06 21:40:23 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-06 21:40:25 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT DISTINCT r.merchant_name FROM receipts AS r JOIN receipt_items AS ri ON r.id = ri.receipt_id WHERE ri.item_name = 'Triple Treat';",
+  "language": "id"
+}
+```
+2025-11-06 21:40:25 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT DISTINCT r.merchant_name FROM receipts AS r JOIN receipt_items AS ri ON r.id = ri.receipt_id WHERE ri.item_name = 'Triple Treat';", 'language': 'id'}
+2025-11-06 21:40:25 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT DISTINCT r.merchant_name FROM receipts AS r JOIN receipt_items AS ri ON r.id = ri.receipt_id WHERE ri.item_name = \'Triple Treat\';", \'language\': \'id\'}'}
+2025-11-06 21:40:25 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-06 21:40:25 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('KFC - BSD Square',), ('KFC - ITC BSD Foodcourt',)]}
+2025-11-06 21:40:25 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-06 21:40:51 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-06 21:40:52 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT SUM(r.grand_total) AS total_september_purchases FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;",
+  "language": "id"
+}
+```
+2025-11-06 21:40:52 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) AS total_september_purchases FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;', 'language': 'id'}
+2025-11-06 21:40:52 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) AS total_september_purchases FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;', 'language': 'id'}"}
+2025-11-06 21:40:52 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-06 21:40:52 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [(Decimal('323780'),)]}
+2025-11-06 21:40:52 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-06 22:07:43 - INFO - Loading PostgreSQL connection...
+2025-11-06 22:07:43 - INFO - Connection completed.
+2025-11-06 22:29:29 - INFO - Loading PostgreSQL connection...
+2025-11-06 22:29:29 - INFO - Connection completed.
+2025-11-06 23:01:34 - INFO - Loading PostgreSQL connection...
+2025-11-06 23:01:34 - INFO - Connection completed.
+2025-11-07 00:26:05 - INFO - Loading PostgreSQL connection...
+2025-11-07 00:26:05 - INFO - Connection completed.
+2025-11-07 08:57:33 - INFO - Loading PostgreSQL connection...
+2025-11-07 08:57:33 - INFO - Connection completed.
+2025-11-07 20:37:20 - INFO - Loading PostgreSQL connection...
+2025-11-07 20:37:20 - INFO - Connection completed.
+2025-11-07 20:37:45 - INFO - Loading PostgreSQL connection...
+2025-11-07 20:37:45 - INFO - Connection completed.
+2025-11-07 20:37:46 - INFO - Loading PostgreSQL connection...
+2025-11-07 20:37:46 - INFO - Connection completed.
+2025-11-07 20:37:48 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-07 20:37:50 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT\n  r.merchant_name,\n  r.transaction_date,\n  r.grand_total\nFROM receipts AS r\nWHERE\n  r.transaction_date >= CURRENT_DATE - INTERVAL '7 days'\nORDER BY\n  r.transaction_date DESC;",
+  "language": "indonesian"
+}
+```
+2025-11-07 20:37:50 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT\n  r.merchant_name,\n  r.transaction_date,\n  r.grand_total\nFROM receipts AS r\nWHERE\n  r.transaction_date >= CURRENT_DATE - INTERVAL '7 days'\nORDER BY\n  r.transaction_date DESC;", 'language': 'indonesian'}
+2025-11-07 20:37:50 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT\\n  r.merchant_name,\\n  r.transaction_date,\\n  r.grand_total\\nFROM receipts AS r\\nWHERE\\n  r.transaction_date >= CURRENT_DATE - INTERVAL \'7 days\'\\nORDER BY\\n  r.transaction_date DESC;", \'language\': \'indonesian\'}'}
+2025-11-07 20:37:50 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-07 20:37:50 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', datetime.date(2025, 11, 5), Decimal('60108')), ("ROTI'O STASIUN TANAH ABANG EKS. CORNER", datetime.date(2025, 11, 5), Decimal('23000'))]}
+2025-11-07 20:37:50 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-07 20:39:16 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-07 20:39:17 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT r.merchant_name, r.transaction_date, r.grand_total FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;",
+  "language": "id"
+}
+```
+2025-11-07 20:39:17 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT r.merchant_name, r.transaction_date, r.grand_total FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;', 'language': 'id'}
+2025-11-07 20:39:17 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT r.merchant_name, r.transaction_date, r.grand_total FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;', 'language': 'id'}"}
+2025-11-07 20:39:17 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-07 20:39:17 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('KFC - ITC BSD Foodcourt', datetime.date(2025, 9, 19), Decimal('79600')), ('SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', datetime.date(2025, 9, 26), Decimal('52700')), ('KFC - BSD Square', datetime.date(2025, 9, 12), Decimal('84500')), ('Totlah - Anggrek Loka', datetime.date(2025, 9, 27), Decimal('39800')), ('SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', datetime.date(2025, 9, 16), Decimal('67180'))]}
+2025-11-07 20:39:17 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-07 20:39:37 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-07 20:39:39 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT\n  ri.item_name,\n  ri.quantity,\n  ri.total_price\nFROM receipt_items AS ri\nJOIN receipts AS r\n  ON ri.receipt_id = r.id\nWHERE\n  r.merchant_name LIKE '%KFC%'\n  AND r.transaction_date = '2025-09-19';",
+  "language": "indonesian"
+}
+```
+2025-11-07 20:39:39 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT\n  ri.item_name,\n  ri.quantity,\n  ri.total_price\nFROM receipt_items AS ri\nJOIN receipts AS r\n  ON ri.receipt_id = r.id\nWHERE\n  r.merchant_name LIKE '%KFC%'\n  AND r.transaction_date = '2025-09-19';", 'language': 'indonesian'}
+2025-11-07 20:39:39 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT\\n  ri.item_name,\\n  ri.quantity,\\n  ri.total_price\\nFROM receipt_items AS ri\\nJOIN receipts AS r\\n  ON ri.receipt_id = r.id\\nWHERE\\n  r.merchant_name LIKE \'%KFC%\'\\n  AND r.transaction_date = \'2025-09-19\';", \'language\': \'indonesian\'}'}
+2025-11-07 20:39:39 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-07 20:39:39 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('Triple Treat', 1, Decimal('84500'))]}
+2025-11-07 20:39:39 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-07 20:39:50 - INFO - Loading PostgreSQL connection...
+2025-11-07 20:39:50 - INFO - Connection completed.
+2025-11-07 20:40:05 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-07 20:40:06 - INFO - Loading PostgreSQL connection...
+2025-11-07 20:40:06 - INFO - Connection completed.
+2025-11-07 20:40:07 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT SUM(r.grand_total) FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = 2025;",
+  "language": "indonesian"
+}
+```
+2025-11-07 20:40:07 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = 2025;', 'language': 'indonesian'}
+2025-11-07 20:40:07 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = 2025;', 'language': 'indonesian'}"}
+2025-11-07 20:40:07 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-07 20:40:07 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [(Decimal('323780'),)]}
+2025-11-07 20:40:07 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-07 20:40:13 - INFO - Loading PostgreSQL connection...
+2025-11-07 20:40:13 - INFO - Connection completed.
+2025-11-07 20:40:19 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-07 20:40:21 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT SUM(r.grand_total) AS total_expenditure\nFROM receipts AS r\nWHERE EXTRACT(MONTH FROM r.transaction_date) = 9\n  AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);",
+  "language": "id"
+}
+```
+2025-11-07 20:40:21 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) AS total_expenditure\nFROM receipts AS r\nWHERE EXTRACT(MONTH FROM r.transaction_date) = 9\n  AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);', 'language': 'id'}
+2025-11-07 20:40:21 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) AS total_expenditure\\nFROM receipts AS r\\nWHERE EXTRACT(MONTH FROM r.transaction_date) = 9\\n  AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);', 'language': 'id'}"}
+2025-11-07 20:40:21 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-07 20:40:21 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [(Decimal('323780'),)]}
+2025-11-07 20:40:21 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-07 20:40:28 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-07 20:40:33 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT r.transaction_date, r.merchant_name, ri.item_name, ri.quantity, ri.unit_price, ri.total_price FROM receipts AS r JOIN receipt_items AS ri ON r.id = ri.receipt_id WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = 2025 ORDER BY r.transaction_date, r.merchant_name, ri.item_name;",
+  "language": "Indonesian"
+}
+```
+2025-11-07 20:40:33 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT r.transaction_date, r.merchant_name, ri.item_name, ri.quantity, ri.unit_price, ri.total_price FROM receipts AS r JOIN receipt_items AS ri ON r.id = ri.receipt_id WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = 2025 ORDER BY r.transaction_date, r.merchant_name, ri.item_name;', 'language': 'Indonesian'}
+2025-11-07 20:40:33 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT r.transaction_date, r.merchant_name, ri.item_name, ri.quantity, ri.unit_price, ri.total_price FROM receipts AS r JOIN receipt_items AS ri ON r.id = ri.receipt_id WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = 2025 ORDER BY r.transaction_date, r.merchant_name, ri.item_name;', 'language': 'Indonesian'}"}
+2025-11-07 20:40:33 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-07 20:40:33 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [(datetime.date(2025, 9, 12), 'KFC - BSD Square', 'Triple Treat', 1, Decimal('79500'), Decimal('79500')), (datetime.date(2025, 9, 16), 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', '#B1G1 Paket Jumbo Sei Sapi x Sei Sapi', 1, Decimal('82680'), Decimal('82680')), (datetime.date(2025, 9, 19), 'KFC - ITC BSD Foodcourt', 'Triple Treat', 1, Decimal('84500'), Decimal('84500')), (datetime.date(2025, 9, 26), 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', '#B1G1 Paket Reguler Sei Sapi x Sei Sapi', 1, Decimal('67200'), Decimal('67200')), (datetime.date(2025, 9, 27), 'Totlah - Anggrek Loka', 'Nasi Wagyu Bakar Totlah (Favourite) Sambal Totlah (Favorit). Topping Kremesan', 1, Decimal('61000'), Decimal('61000'))]}
+2025-11-07 20:40:33 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-07 20:41:29 - INFO - Loading PostgreSQL connection...
+2025-11-07 20:41:29 - INFO - Connection completed.
+2025-11-07 20:41:32 - INFO - Loading PostgreSQL connection...
+2025-11-07 20:41:32 - INFO - Connection completed.
+2025-11-07 20:41:41 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-07 20:41:43 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT SUM(r.grand_total) AS total_grand_total_september\nFROM receipts AS r\nWHERE r.transaction_date >= '2025-09-01' AND r.transaction_date <= '2025-09-30';",
+  "language": "id"
+}```
+2025-11-07 20:41:43 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT SUM(r.grand_total) AS total_grand_total_september\nFROM receipts AS r\nWHERE r.transaction_date >= '2025-09-01' AND r.transaction_date <= '2025-09-30';", 'language': 'id'}
+2025-11-07 20:41:43 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT SUM(r.grand_total) AS total_grand_total_september\\nFROM receipts AS r\\nWHERE r.transaction_date >= \'2025-09-01\' AND r.transaction_date <= \'2025-09-30\';", \'language\': \'id\'}'}
+2025-11-07 20:41:43 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-07 20:41:43 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [(Decimal('323780'),)]}
+2025-11-07 20:41:43 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-07 20:41:59 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-07 20:42:00 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT r.merchant_name, r.transaction_date, r.grand_total FROM receipts AS r WHERE r.transaction_date >= '2025-09-01' AND r.transaction_date <= '2025-09-30' ORDER BY r.transaction_date;",
+  "language": "id"
+}```
+2025-11-07 20:42:00 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT r.merchant_name, r.transaction_date, r.grand_total FROM receipts AS r WHERE r.transaction_date >= '2025-09-01' AND r.transaction_date <= '2025-09-30' ORDER BY r.transaction_date;", 'language': 'id'}
+2025-11-07 20:42:00 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT r.merchant_name, r.transaction_date, r.grand_total FROM receipts AS r WHERE r.transaction_date >= \'2025-09-01\' AND r.transaction_date <= \'2025-09-30\' ORDER BY r.transaction_date;", \'language\': \'id\'}'}
+2025-11-07 20:42:00 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-07 20:42:00 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('KFC - BSD Square', datetime.date(2025, 9, 12), Decimal('84500')), ('SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', datetime.date(2025, 9, 16), Decimal('67180')), ('KFC - ITC BSD Foodcourt', datetime.date(2025, 9, 19), Decimal('79600')), ('SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', datetime.date(2025, 9, 26), Decimal('52700')), ('Totlah - Anggrek Loka', datetime.date(2025, 9, 27), Decimal('39800'))]}
+2025-11-07 20:42:00 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-07 20:43:04 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-07 20:43:06 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT r.merchant_name, r.transaction_date, r.grand_total FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 10 AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE) ORDER BY r.transaction_date;",
+  "language": "indonesian"
+}
+```
+2025-11-07 20:43:06 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT r.merchant_name, r.transaction_date, r.grand_total FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 10 AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE) ORDER BY r.transaction_date;', 'language': 'indonesian'}
+2025-11-07 20:43:06 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT r.merchant_name, r.transaction_date, r.grand_total FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 10 AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE) ORDER BY r.transaction_date;', 'language': 'indonesian'}"}
+2025-11-07 20:43:06 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-07 20:43:06 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', datetime.date(2025, 10, 14), Decimal('65108'))]}
+2025-11-07 20:43:06 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-07 20:43:51 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-07 20:43:54 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT\n  ri.item_name,\n  ri.quantity,\n  ri.unit_price,\n  ri.total_price\nFROM receipt_items AS ri\nJOIN receipts AS r\n  ON ri.receipt_id = r.id\nWHERE\n  r.merchant_name = 'KFC - BSD Square' AND r.transaction_date = '2025-09-12';",
+  "language": "indonesian"
+}
+```
+2025-11-07 20:43:54 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT\n  ri.item_name,\n  ri.quantity,\n  ri.unit_price,\n  ri.total_price\nFROM receipt_items AS ri\nJOIN receipts AS r\n  ON ri.receipt_id = r.id\nWHERE\n  r.merchant_name = 'KFC - BSD Square' AND r.transaction_date = '2025-09-12';", 'language': 'indonesian'}
+2025-11-07 20:43:54 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT\\n  ri.item_name,\\n  ri.quantity,\\n  ri.unit_price,\\n  ri.total_price\\nFROM receipt_items AS ri\\nJOIN receipts AS r\\n  ON ri.receipt_id = r.id\\nWHERE\\n  r.merchant_name = \'KFC - BSD Square\' AND r.transaction_date = \'2025-09-12\';", \'language\': \'indonesian\'}'}
+2025-11-07 20:43:54 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-07 20:43:54 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('Triple Treat', 1, Decimal('79500'), Decimal('79500'))]}
+2025-11-07 20:43:54 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-07 20:44:07 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-07 20:44:09 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT r.discount FROM receipts AS r WHERE r.merchant_name = 'KFC - BSD Square' AND r.transaction_date = '2025-09-12';",
+  "language": "indonesian"
+}
+```
+2025-11-07 20:44:09 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT r.discount FROM receipts AS r WHERE r.merchant_name = 'KFC - BSD Square' AND r.transaction_date = '2025-09-12';", 'language': 'indonesian'}
+2025-11-07 20:44:09 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT r.discount FROM receipts AS r WHERE r.merchant_name = \'KFC - BSD Square\' AND r.transaction_date = \'2025-09-12\';", \'language\': \'indonesian\'}'}
+2025-11-07 20:44:09 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-07 20:44:09 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [(Decimal('14000'),)]}
+2025-11-07 20:44:09 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-07 20:44:12 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-07 20:44:15 - INFO - Generate SQL query result: {
+  "action": "nothing",
+  "language": "indonesian"
+}
+2025-11-07 20:44:15 - INFO - Generate SQL query result: {'action': 'nothing', 'language': 'indonesian'}
+2025-11-07 20:44:15 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'nothing', 'language': 'indonesian'}"}
+2025-11-07 20:44:15 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-07 20:44:41 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-07 20:44:44 - INFO - Generate SQL query result: ```json
+{
+  "action": "nothing",
+  "language": "indonesian"
+}
+```
+2025-11-07 20:44:44 - INFO - Generate SQL query result: {'action': 'nothing', 'language': 'indonesian'}
+2025-11-07 20:44:44 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'nothing', 'language': 'indonesian'}"}
+2025-11-07 20:44:44 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-07 23:08:17 - INFO - Loading PostgreSQL connection...
+2025-11-07 23:08:17 - INFO - Connection completed.
+2025-11-07 23:17:38 - INFO - Loading PostgreSQL connection...
+2025-11-07 23:17:38 - INFO - Connection completed.
