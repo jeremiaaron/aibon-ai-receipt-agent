@@ -21,7 +21,7 @@ from aibon_library import DocAgent, MongoAgent, PostgresAgent
 from ai_agent import AibonAgent
 
 st.set_page_config(page_title="AI-Bon Agent", layout="wide")
-st.title("AI-Bon, Your Receipt-Processing Assistant!")
+st.title("AI-Bon, Ready to Assist with Your Receipts!")
 
 # arbitrary user_id, only 1 user for prototype
 # persist users data if the project is scaled for multiple users
@@ -321,7 +321,7 @@ if user_input:
     # update streamlit displayed messages state
     st.session_state["messages"].append({"role": "assistant", "content": final_response})
 
-    # Update AI chat in chat history
+    # update AI chat in chat history
     add_ai_message_to_db(
         message=final_response,
         session_id=st.session_state["session_id"],

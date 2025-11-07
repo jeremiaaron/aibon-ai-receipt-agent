@@ -1,8 +1,7 @@
 import os
+import re
 from dotenv import load_dotenv
 load_dotenv()
-from typing import Literal
-import re
 
 import json
 from logging import Logger
@@ -12,17 +11,9 @@ from datetime import datetime
 from pymongo import MongoClient
 
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_core.prompts import PromptTemplate
-from langchain_core.output_parsers import StrOutputParser
-from langchain_openai import ChatOpenAI, AzureChatOpenAI
-from langchain_core.prompts import PromptTemplate, ChatPromptTemplate, SystemMessagePromptTemplate
-from langchain_core.output_parsers import StrOutputParser
 
 from langchain_core.messages import (
-    BaseMessage,
     HumanMessage,
-    AIMessage,
-    ToolMessage,
     SystemMessage
 )
 
