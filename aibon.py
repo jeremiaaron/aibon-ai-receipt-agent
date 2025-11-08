@@ -21,7 +21,7 @@ from aibon_library import DocAgent, MongoAgent, PostgresAgent
 from ai_agent import AibonAgent
 
 st.set_page_config(page_title="AI-Bon Agent", layout="wide")
-st.title("AI-Bon, Ready to Assist with Your Receipts!")
+st.title("AI-Bon, Your Friendly AI Receipt Assistant!")
 
 # arbitrary user_id, only 1 user for prototype
 # persist users data if the project is scaled for multiple users

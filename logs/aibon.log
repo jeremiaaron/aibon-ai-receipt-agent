@@ -405,3 +405,367 @@
 2025-11-08 02:29:08 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
 2025-11-08 02:29:08 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('ICED CHOCOLATE 16 OZ', 1, Decimal('23000'), Decimal('23000'), datetime.date(2025, 11, 5), "ROTI'O STASIUN ANAH ABANG EKS. CORNER"), ('#B1G1 Paket Jumbo Sei Sapi x Sei Sapi', 1, Decimal('82680'), Decimal('82680'), datetime.date(2025, 11, 5), 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu')]}
 2025-11-08 02:29:08 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 02:32:50 - INFO - Loading PostgreSQL connection...
+2025-11-08 02:32:50 - INFO - Connection completed.
+2025-11-08 02:35:28 - INFO - Loading PostgreSQL connection...
+2025-11-08 02:35:28 - INFO - Connection completed.
+2025-11-08 05:21:01 - INFO - Loading PostgreSQL connection...
+2025-11-08 05:21:01 - INFO - Connection completed.
+2025-11-08 06:57:10 - INFO - Loading PostgreSQL connection...
+2025-11-08 06:57:10 - INFO - Connection completed.
+2025-11-08 08:32:25 - INFO - Loading PostgreSQL connection...
+2025-11-08 08:32:25 - INFO - Connection completed.
+2025-11-08 10:05:51 - INFO - Loading PostgreSQL connection...
+2025-11-08 10:05:51 - INFO - Connection completed.
+2025-11-08 11:58:07 - INFO - Loading PostgreSQL connection...
+2025-11-08 11:58:07 - INFO - Connection completed.
+2025-11-08 12:09:13 - INFO - Loading PostgreSQL connection...
+2025-11-08 12:09:13 - INFO - Connection completed.
+2025-11-08 13:45:23 - INFO - Loading PostgreSQL connection...
+2025-11-08 13:45:23 - INFO - Connection completed.
+2025-11-08 13:50:18 - INFO - Loading PostgreSQL connection...
+2025-11-08 13:50:18 - INFO - Connection completed.
+2025-11-08 14:01:33 - INFO - Loading PostgreSQL connection...
+2025-11-08 14:01:33 - INFO - Connection completed.
+2025-11-08 14:19:33 - INFO - Loading PostgreSQL connection...
+2025-11-08 14:19:33 - INFO - Connection completed.
+2025-11-08 14:29:16 - INFO - Loading PostgreSQL connection...
+2025-11-08 14:29:16 - INFO - Connection completed.
+2025-11-08 14:30:29 - INFO - Loading PostgreSQL connection...
+2025-11-08 14:30:29 - INFO - Connection completed.
+2025-11-08 14:31:50 - INFO - Extracting receipt data...
+2025-11-08 14:32:01 - INFO - Extracted data: {'merchant_details': {'name': "ROTI'O STASIUN ANAH ABANG EKS. CORNER", 'address': None, 'phone_number': None}, 'transaction_details': {'date': '2025-11-05', 'time': None, 'receipt_number': 'AG5KECRFYCW'}, 'line_items': [{'item_name': 'ICED CHOCOLATE 16 OZ', 'quantity': 1, 'unit_price': 23000.0, 'total_price': 23000.0}], 'cost_summary': {'subtotal': 23000.0, 'total_taxes_and_fees': 0.0, 'total_discount': 0.0, 'grand_total': 23000.0}}
+2025-11-08 14:32:01 - INFO - Inserting receipt data to DB...
+2025-11-08 14:32:01 - INFO - Inserted receipt id: 29
+2025-11-08 14:32:01 - INFO - Extracting receipt data...
+2025-11-08 14:32:15 - INFO - Extracted data: {'merchant_details': {'name': 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', 'address': 'Jl. Griya Loka Raya (Bakso Loncat), Rawa Buntu', 'phone_number': None}, 'transaction_details': {'date': '2025-11-05', 'time': '18:40:00', 'receipt_number': 'GF-043'}, 'line_items': [{'item_name': '#B1G1 Paket Jumbo Sei Sapi x Sei Sapi', 'quantity': 1, 'unit_price': 82680.0, 'total_price': 82680.0}], 'cost_summary': {'subtotal': 82680.0, 'total_taxes_and_fees': 20500.0, 'total_discount': 43072.0, 'grand_total': 60108.0}}
+2025-11-08 14:32:15 - INFO - Inserting receipt data to DB...
+2025-11-08 14:32:15 - INFO - Inserted receipt id: 30
+2025-11-08 14:32:15 - INFO - Extracting receipt data...
+2025-11-08 14:32:23 - INFO - Extracted data: {'merchant_details': {'name': 'KFC - BSD Square', 'address': 'Sunburst Cbd Lot 1, Jl. Kapt. Soebianto Djojohandana, Jl. Sumatra, Rawa Mekar Jaya, Serpong, Kota T...', 'phone_number': None}, 'transaction_details': {'date': '2025-09-12', 'time': '18:06:00', 'receipt_number': None}, 'line_items': [{'item_name': 'Triple Treat', 'quantity': 1, 'unit_price': 79500.0, 'total_price': 79500.0}], 'cost_summary': {'subtotal': 79500.0, 'total_taxes_and_fees': 19000.0, 'total_discount': 14000.0, 'grand_total': 84500.0}}
+2025-11-08 14:32:23 - INFO - Inserting receipt data to DB...
+2025-11-08 14:32:23 - INFO - Inserted receipt id: 31
+2025-11-08 14:32:23 - INFO - Extracting receipt data...
+2025-11-08 14:32:40 - INFO - Extracted data: {'merchant_details': {'name': 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', 'address': 'Jl. Griya Loka Raya (Bakso Loncat), Rawa Buntu...', 'phone_number': None}, 'transaction_details': {'date': '2025-09-26', 'time': '17:53:00', 'receipt_number': None}, 'line_items': [{'item_name': '#B1G1 Paket Reguler Sei Sapi x Sei Sapi', 'quantity': 1, 'unit_price': 67200.0, 'total_price': 67200.0}], 'cost_summary': {'subtotal': 67200.0, 'total_taxes_and_fees': 25359.0, 'total_discount': 35000.0, 'grand_total': 52700.0}}
+2025-11-08 14:32:40 - INFO - Inserting receipt data to DB...
+2025-11-08 14:32:40 - INFO - Inserted receipt id: 32
+2025-11-08 14:32:40 - INFO - Extracting receipt data...
+2025-11-08 14:32:56 - INFO - Extracted data: {'merchant_details': {'name': 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', 'address': 'Rawa Buntu', 'phone_number': None}, 'transaction_details': {'date': '2025-10-14', 'time': '18:33:00', 'receipt_number': 'GF-077'}, 'line_items': [{'item_name': '#B1G1 Paket Jumbo Sei Sapi x Sei Sapi', 'quantity': 1, 'unit_price': 82680.0, 'total_price': 82680.0}], 'cost_summary': {'subtotal': 82680.0, 'total_taxes_and_fees': 26362.0, 'total_discount': 43072.0, 'grand_total': 65108.0}}
+2025-11-08 14:32:56 - INFO - Inserting receipt data to DB...
+2025-11-08 14:32:56 - INFO - Inserted receipt id: 33
+2025-11-08 14:32:56 - INFO - Extracting receipt data...
+2025-11-08 14:33:07 - INFO - Extracted data: {'merchant_details': {'name': 'KFC - ITC BSD Foodcourt', 'address': 'ITC BSD, Food Court, Jl. Pahlawan Seribu Bsd... Jl. Sumatra, Rawa Mekar Jaya, Serpong, Kota T...', 'phone_number': None}, 'transaction_details': {'date': '2025-09-19', 'time': '20:01:00', 'receipt_number': 'GF-472'}, 'line_items': [{'item_name': 'Triple Treat', 'quantity': 1, 'unit_price': 84500.0, 'total_price': 84500.0}], 'cost_summary': {'subtotal': 84500.0, 'total_taxes_and_fees': 22000.0, 'total_discount': 26900.0, 'grand_total': 79600.0}}
+2025-11-08 14:33:07 - INFO - Inserting receipt data to DB...
+2025-11-08 14:33:07 - INFO - Inserted receipt id: 34
+2025-11-08 14:33:07 - INFO - Extracting receipt data...
+2025-11-08 14:33:21 - INFO - Extracted data: {'merchant_details': {'name': 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', 'address': None, 'phone_number': None}, 'transaction_details': {'date': '2025-09-16', 'time': '20:17:00', 'receipt_number': None}, 'line_items': [{'item_name': '#B1G1 Paket Jumbo Sei Sapi x Sei Sapi', 'quantity': 1, 'unit_price': 82680.0, 'total_price': 82680.0}], 'cost_summary': {'subtotal': 82680.0, 'total_taxes_and_fees': 25766.0, 'total_discount': 35000.0, 'grand_total': 67180.0}}
+2025-11-08 14:33:21 - INFO - Inserting receipt data to DB...
+2025-11-08 14:33:21 - INFO - Inserted receipt id: 35
+2025-11-08 14:33:21 - INFO - Extracting receipt data...
+2025-11-08 14:33:31 - INFO - Extracted data: {'merchant_details': {'name': 'Totlah - Anggrek Loka', 'address': None, 'phone_number': None}, 'transaction_details': {'date': '2025-09-27', 'time': '13:55:00', 'receipt_number': 'A-8DSE0WIWX49UAV'}, 'line_items': [{'item_name': 'Nasi Wagyu Bakar Totlah (Favourite) Sambal Totlah (Favorit). Topping Kremesan', 'quantity': 1, 'unit_price': 61000.0, 'total_price': 61000.0}], 'cost_summary': {'subtotal': 61000.0, 'total_taxes_and_fees': 18800.0, 'total_discount': 40000.0, 'grand_total': 39800.0}}
+2025-11-08 14:33:31 - INFO - Inserting receipt data to DB...
+2025-11-08 14:33:31 - INFO - Inserted receipt id: 36
+2025-11-08 14:34:45 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:34:47 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT\n  ri.item_name\nFROM receipt_items AS ri\nJOIN receipts AS r\n  ON ri.receipt_id = r.id\nWHERE\n  r.transaction_date >= CURRENT_DATE - INTERVAL '7 days';",
+  "language": "id"
+}
+```
+2025-11-08 14:34:47 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT\n  ri.item_name\nFROM receipt_items AS ri\nJOIN receipts AS r\n  ON ri.receipt_id = r.id\nWHERE\n  r.transaction_date >= CURRENT_DATE - INTERVAL '7 days';", 'language': 'id'}
+2025-11-08 14:34:47 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT\\n  ri.item_name\\nFROM receipt_items AS ri\\nJOIN receipts AS r\\n  ON ri.receipt_id = r.id\\nWHERE\\n  r.transaction_date >= CURRENT_DATE - INTERVAL \'7 days\';", \'language\': \'id\'}'}
+2025-11-08 14:34:47 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:34:47 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('ICED CHOCOLATE 16 OZ',), ('#B1G1 Paket Jumbo Sei Sapi x Sei Sapi',)]}
+2025-11-08 14:34:47 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:35:07 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:35:09 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT\n  r.merchant_name,\n  ri.item_name\nFROM receipts AS r\nJOIN receipt_items AS ri\n  ON r.id = ri.receipt_id\nWHERE\n  r.transaction_date >= CURRENT_DATE - INTERVAL '7 days'\nGROUP BY\n  r.merchant_name,\n  ri.item_name;",
+  "language": "id"
+}
+```
+2025-11-08 14:35:09 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT\n  r.merchant_name,\n  ri.item_name\nFROM receipts AS r\nJOIN receipt_items AS ri\n  ON r.id = ri.receipt_id\nWHERE\n  r.transaction_date >= CURRENT_DATE - INTERVAL '7 days'\nGROUP BY\n  r.merchant_name,\n  ri.item_name;", 'language': 'id'}
+2025-11-08 14:35:09 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT\\n  r.merchant_name,\\n  ri.item_name\\nFROM receipts AS r\\nJOIN receipt_items AS ri\\n  ON r.id = ri.receipt_id\\nWHERE\\n  r.transaction_date >= CURRENT_DATE - INTERVAL \'7 days\'\\nGROUP BY\\n  r.merchant_name,\\n  ri.item_name;", \'language\': \'id\'}'}
+2025-11-08 14:35:09 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:35:09 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', '#B1G1 Paket Jumbo Sei Sapi x Sei Sapi'), ("ROTI'O STASIUN ANAH ABANG EKS. CORNER", 'ICED CHOCOLATE 16 OZ')]}
+2025-11-08 14:35:09 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:36:07 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:36:14 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT DISTINCT r.merchant_name FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);",
+  "language": "id"
+}
+```
+2025-11-08 14:36:14 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT DISTINCT r.merchant_name FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);', 'language': 'id'}
+2025-11-08 14:36:14 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT DISTINCT r.merchant_name FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);', 'language': 'id'}"}
+2025-11-08 14:36:14 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:36:14 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('KFC - BSD Square',), ('KFC - ITC BSD Foodcourt',), ('SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu',), ('Totlah - Anggrek Loka',)]}
+2025-11-08 14:36:14 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:37:02 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:37:03 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT SUM(r.grand_total) FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);",
+  "language": "id"
+}
+```
+2025-11-08 14:37:03 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);', 'language': 'id'}
+2025-11-08 14:37:03 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);', 'language': 'id'}"}
+2025-11-08 14:37:03 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:37:03 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [(Decimal('323780'),)]}
+2025-11-08 14:37:03 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:37:23 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:37:30 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT SUM(r.grand_total) FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;",
+  "language": "id"
+}
+```
+2025-11-08 14:37:30 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;', 'language': 'id'}
+2025-11-08 14:37:30 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;', 'language': 'id'}"}
+2025-11-08 14:37:30 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:37:30 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [(Decimal('323780'),)]}
+2025-11-08 14:37:30 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:38:18 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:38:20 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT ri.item_name FROM receipt_items AS ri JOIN receipts AS r ON ri.receipt_id = r.id WHERE r.transaction_date = '2023-10-14';",
+  "language": "en"
+}
+```
+2025-11-08 14:38:20 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT ri.item_name FROM receipt_items AS ri JOIN receipts AS r ON ri.receipt_id = r.id WHERE r.transaction_date = '2023-10-14';", 'language': 'en'}
+2025-11-08 14:38:20 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT ri.item_name FROM receipt_items AS ri JOIN receipts AS r ON ri.receipt_id = r.id WHERE r.transaction_date = \'2023-10-14\';", \'language\': \'en\'}'}
+2025-11-08 14:38:20 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:38:20 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': []}
+2025-11-08 14:38:20 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:42:32 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:42:40 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT DISTINCT ri.item_name FROM receipt_items AS ri JOIN receipts AS r ON ri.receipt_id = r.id WHERE r.transaction_date = '2025-10-14';",
+  "language": "en"
+}
+```
+2025-11-08 14:42:40 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT DISTINCT ri.item_name FROM receipt_items AS ri JOIN receipts AS r ON ri.receipt_id = r.id WHERE r.transaction_date = '2025-10-14';", 'language': 'en'}
+2025-11-08 14:42:40 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT DISTINCT ri.item_name FROM receipt_items AS ri JOIN receipts AS r ON ri.receipt_id = r.id WHERE r.transaction_date = \'2025-10-14\';", \'language\': \'en\'}'}
+2025-11-08 14:42:40 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:42:40 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('#B1G1 Paket Jumbo Sei Sapi x Sei Sapi',)]}
+2025-11-08 14:42:40 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:42:52 - INFO - Loading PostgreSQL connection...
+2025-11-08 14:42:52 - INFO - Connection completed.
+2025-11-08 14:43:35 - INFO - Loading PostgreSQL connection...
+2025-11-08 14:43:35 - INFO - Connection completed.
+2025-11-08 14:44:48 - INFO - Loading PostgreSQL connection...
+2025-11-08 14:44:48 - INFO - Connection completed.
+2025-11-08 14:45:48 - INFO - Extracting receipt data...
+2025-11-08 14:45:56 - INFO - Extracted data: {'merchant_details': {'name': "ROTI'O STASIUN", 'address': 'ANAH ABANG EKS. CORNER', 'phone_number': None}, 'transaction_details': {'date': '2025-11-05', 'time': None, 'receipt_number': 'AG5KECRFYCW'}, 'line_items': [{'item_name': 'ICED CHOCOLATE 16 OZ', 'quantity': 1, 'unit_price': 23000.0, 'total_price': 23000.0}], 'cost_summary': {'subtotal': 23000.0, 'total_taxes_and_fees': 0.0, 'total_discount': 0.0, 'grand_total': 23000.0}}
+2025-11-08 14:45:56 - INFO - Inserting receipt data to DB...
+2025-11-08 14:45:56 - INFO - Inserted receipt id: 37
+2025-11-08 14:45:56 - INFO - Extracting receipt data...
+2025-11-08 14:46:03 - INFO - Extracted data: {'merchant_details': {'name': 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', 'address': 'Jl. Griya Loka Raya (Bakso Loncat), Rawa Buntu...', 'phone_number': None}, 'transaction_details': {'date': '2025-11-05', 'time': '18:40:00', 'receipt_number': None}, 'line_items': [{'item_name': '#B1G1 Paket Jumbo Sei Sapi x Sei Sapi', 'quantity': 1, 'unit_price': 82680.0, 'total_price': 82680.0}], 'cost_summary': {'subtotal': 82680.0, 'total_taxes_and_fees': 26362.0, 'total_discount': 43072.0, 'grand_total': 60108.0}}
+2025-11-08 14:46:03 - INFO - Inserting receipt data to DB...
+2025-11-08 14:46:03 - INFO - Inserted receipt id: 38
+2025-11-08 14:46:03 - INFO - Extracting receipt data...
+2025-11-08 14:46:09 - INFO - Extracted data: {'merchant_details': {'name': 'KFC - BSD Square', 'address': None, 'phone_number': None}, 'transaction_details': {'date': '2025-09-12', 'time': '18:06:00', 'receipt_number': 'GF-597'}, 'line_items': [{'item_name': 'Triple Treat', 'quantity': 1, 'unit_price': 79500.0, 'total_price': 79500.0}], 'cost_summary': {'subtotal': 79500.0, 'total_taxes_and_fees': 19000.0, 'total_discount': 14000.0, 'grand_total': 84500.0}}
+2025-11-08 14:46:09 - INFO - Inserting receipt data to DB...
+2025-11-08 14:46:09 - INFO - Inserted receipt id: 39
+2025-11-08 14:46:09 - INFO - Extracting receipt data...
+2025-11-08 14:46:22 - INFO - Extracted data: {'merchant_details': {'name': 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', 'address': 'Jl. Griya Loka Raya (Bakso Loncat), Rawa Buntu...', 'phone_number': None}, 'transaction_details': {'date': '2025-09-26', 'time': '17:53:00', 'receipt_number': None}, 'line_items': [{'item_name': '#B1G1 Paket Reguler Sei Sapi x Sei Sapi', 'quantity': 1, 'unit_price': 67200.0, 'total_price': 67200.0}], 'cost_summary': {'subtotal': 67200.0, 'total_taxes_and_fees': 20500.0, 'total_discount': 35000.0, 'grand_total': 52700.0}}
+2025-11-08 14:46:22 - INFO - Inserting receipt data to DB...
+2025-11-08 14:46:22 - INFO - Inserted receipt id: 40
+2025-11-08 14:46:22 - INFO - Extracting receipt data...
+2025-11-08 14:46:37 - INFO - Extracted data: {'merchant_details': {'name': 'SelIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', 'address': 'Jl. Griya Loka Raya (Bakso Loncat), Rawa Buntu', 'phone_number': None}, 'transaction_details': {'date': '2025-10-14', 'time': '18:33:00', 'receipt_number': 'GF-077'}, 'line_items': [{'item_name': '#B1G1 Paket Jumbo Sei Sapi x Sei Sapi', 'quantity': 1, 'unit_price': 82680.0, 'total_price': 82680.0}], 'cost_summary': {'subtotal': 82680.0, 'total_taxes_and_fees': 25500.0, 'total_discount': 43072.0, 'grand_total': 65108.0}}
+2025-11-08 14:46:37 - INFO - Inserting receipt data to DB...
+2025-11-08 14:46:37 - INFO - Inserted receipt id: 41
+2025-11-08 14:46:37 - INFO - Extracting receipt data...
+2025-11-08 14:46:45 - INFO - Extracted data: {'merchant_details': {'name': 'KFC - ITC BSD Foodcourt', 'address': 'ITC BSD, Food Court, Jl. Pahlawan Seribu BSD', 'phone_number': None}, 'transaction_details': {'date': '2025-09-19', 'time': '20:01:00', 'receipt_number': 'GF-472'}, 'line_items': [{'item_name': 'Triple Treat', 'quantity': 1, 'unit_price': 84500.0, 'total_price': 84500.0}], 'cost_summary': {'subtotal': 84500.0, 'total_taxes_and_fees': 22000.0, 'total_discount': 26900.0, 'grand_total': 79600.0}}
+2025-11-08 14:46:45 - INFO - Inserting receipt data to DB...
+2025-11-08 14:46:45 - INFO - Inserted receipt id: 42
+2025-11-08 14:46:45 - INFO - Extracting receipt data...
+2025-11-08 14:47:03 - INFO - Extracted data: {'merchant_details': {'name': 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', 'address': 'Jl. Griya Loka Raya (Bakso Loncat), Rawa Buntu', 'phone_number': None}, 'transaction_details': {'date': '2025-09-16', 'time': '20:17:00', 'receipt_number': None}, 'line_items': [{'item_name': '#B1G1 Paket Jumbo Sei Sapi x Sei Sapi', 'quantity': 1, 'unit_price': 82680.0, 'total_price': 82680.0}], 'cost_summary': {'subtotal': 82680.0, 'total_taxes_and_fees': 19500.0, 'total_discount': 35000.0, 'grand_total': 67180.0}}
+2025-11-08 14:47:03 - INFO - Inserting receipt data to DB...
+2025-11-08 14:47:03 - INFO - Inserted receipt id: 43
+2025-11-08 14:47:03 - INFO - Extracting receipt data...
+2025-11-08 14:47:16 - INFO - Extracted data: {'merchant_details': {'name': 'Totlah - Anggrek Loka', 'address': 'Jl. Anggrek Lokasi (Mitra Kuliner BSD), Rawa Bu...', 'phone_number': None}, 'transaction_details': {'date': '2025-09-27', 'time': '13:55:00', 'receipt_number': 'A-8DSEOWIWX49UAV'}, 'line_items': [{'item_name': 'Nasi Wagyu Bakar Totlah (Favourite) Sambal Totlah (Favorit). Topping Kremesan', 'quantity': 1, 'unit_price': 61000.0, 'total_price': 61000.0}], 'cost_summary': {'subtotal': 61000.0, 'total_taxes_and_fees': 18800.0, 'total_discount': 40000.0, 'grand_total': 39800.0}}
+2025-11-08 14:47:16 - INFO - Inserting receipt data to DB...
+2025-11-08 14:47:16 - INFO - Inserted receipt id: 44
+2025-11-08 14:48:08 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:48:10 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT DISTINCT ri.item_name FROM receipt_items AS ri JOIN receipts AS r ON ri.receipt_id = r.id WHERE r.transaction_date >= CURRENT_DATE - INTERVAL '7 days';",
+  "language": "id"
+}
+```
+2025-11-08 14:48:10 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT DISTINCT ri.item_name FROM receipt_items AS ri JOIN receipts AS r ON ri.receipt_id = r.id WHERE r.transaction_date >= CURRENT_DATE - INTERVAL '7 days';", 'language': 'id'}
+2025-11-08 14:48:10 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT DISTINCT ri.item_name FROM receipt_items AS ri JOIN receipts AS r ON ri.receipt_id = r.id WHERE r.transaction_date >= CURRENT_DATE - INTERVAL \'7 days\';", \'language\': \'id\'}'}
+2025-11-08 14:48:10 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:48:10 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('#B1G1 Paket Jumbo Sei Sapi x Sei Sapi',), ('ICED CHOCOLATE 16 OZ',)]}
+2025-11-08 14:48:10 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:48:31 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:48:33 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT DISTINCT r.merchant_name FROM receipts AS r JOIN receipt_items AS ri ON r.id = ri.receipt_id WHERE r.transaction_date >= CURRENT_DATE - INTERVAL '7 days';",
+  "language": "id"
+}
+```
+2025-11-08 14:48:33 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT DISTINCT r.merchant_name FROM receipts AS r JOIN receipt_items AS ri ON r.id = ri.receipt_id WHERE r.transaction_date >= CURRENT_DATE - INTERVAL '7 days';", 'language': 'id'}
+2025-11-08 14:48:33 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT DISTINCT r.merchant_name FROM receipts AS r JOIN receipt_items AS ri ON r.id = ri.receipt_id WHERE r.transaction_date >= CURRENT_DATE - INTERVAL \'7 days\';", \'language\': \'id\'}'}
+2025-11-08 14:48:33 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:48:33 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [("ROTI'O STASIUN",), ('SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu',)]}
+2025-11-08 14:48:33 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:49:09 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:49:11 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT r.merchant_name, SUM(r.grand_total) AS total_spent\nFROM receipts AS r\nWHERE r.transaction_date >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') AND r.transaction_date < DATE_TRUNC('month', CURRENT_DATE)\nGROUP BY r.merchant_name\nORDER BY total_spent DESC;",
+  "language": "id"
+}
+```
+2025-11-08 14:49:11 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT r.merchant_name, SUM(r.grand_total) AS total_spent\nFROM receipts AS r\nWHERE r.transaction_date >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') AND r.transaction_date < DATE_TRUNC('month', CURRENT_DATE)\nGROUP BY r.merchant_name\nORDER BY total_spent DESC;", 'language': 'id'}
+2025-11-08 14:49:11 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT r.merchant_name, SUM(r.grand_total) AS total_spent\\nFROM receipts AS r\\nWHERE r.transaction_date >= DATE_TRUNC(\'month\', CURRENT_DATE - INTERVAL \'1 month\') AND r.transaction_date < DATE_TRUNC(\'month\', CURRENT_DATE)\\nGROUP BY r.merchant_name\\nORDER BY total_spent DESC;", \'language\': \'id\'}'}
+2025-11-08 14:49:11 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:49:11 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('SelIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', Decimal('65108'))]}
+2025-11-08 14:49:11 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:49:43 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:49:45 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT DISTINCT r.merchant_name FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);",
+  "language": "indonesian"
+}
+```
+2025-11-08 14:49:45 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT DISTINCT r.merchant_name FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);', 'language': 'indonesian'}
+2025-11-08 14:49:45 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT DISTINCT r.merchant_name FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9 AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);', 'language': 'indonesian'}"}
+2025-11-08 14:49:45 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:49:45 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('KFC - BSD Square',), ('KFC - ITC BSD Foodcourt',), ('SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu',), ('Totlah - Anggrek Loka',)]}
+2025-11-08 14:49:45 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:49:56 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:49:58 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT r.merchant_name, SUM(r.grand_total) AS total_amount\nFROM receipts AS r\nWHERE r.transaction_date >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month')\n  AND r.transaction_date < DATE_TRUNC('month', CURRENT_DATE)\nGROUP BY r.merchant_name;",
+  "language": "id"
+}
+```
+2025-11-08 14:49:58 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT r.merchant_name, SUM(r.grand_total) AS total_amount\nFROM receipts AS r\nWHERE r.transaction_date >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month')\n  AND r.transaction_date < DATE_TRUNC('month', CURRENT_DATE)\nGROUP BY r.merchant_name;", 'language': 'id'}
+2025-11-08 14:49:58 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT r.merchant_name, SUM(r.grand_total) AS total_amount\\nFROM receipts AS r\\nWHERE r.transaction_date >= DATE_TRUNC(\'month\', CURRENT_DATE - INTERVAL \'1 month\')\\n  AND r.transaction_date < DATE_TRUNC(\'month\', CURRENT_DATE)\\nGROUP BY r.merchant_name;", \'language\': \'id\'}'}
+2025-11-08 14:49:58 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:49:58 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('SelIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', Decimal('65108'))]}
+2025-11-08 14:49:58 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:50:55 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:50:57 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT r.merchant_name, SUM(r.grand_total) AS total_pembelian\nFROM receipts AS r\nWHERE EXTRACT(MONTH FROM r.transaction_date) = 9\n  AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE)\nGROUP BY r.merchant_name;",
+  "language": "id"
+}
+```
+2025-11-08 14:50:57 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT r.merchant_name, SUM(r.grand_total) AS total_pembelian\nFROM receipts AS r\nWHERE EXTRACT(MONTH FROM r.transaction_date) = 9\n  AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE)\nGROUP BY r.merchant_name;', 'language': 'id'}
+2025-11-08 14:50:57 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT r.merchant_name, SUM(r.grand_total) AS total_pembelian\\nFROM receipts AS r\\nWHERE EXTRACT(MONTH FROM r.transaction_date) = 9\\n  AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE)\\nGROUP BY r.merchant_name;', 'language': 'id'}"}
+2025-11-08 14:50:57 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:50:57 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('KFC - BSD Square', Decimal('84500')), ('SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', Decimal('119880')), ('Totlah - Anggrek Loka', Decimal('39800')), ('KFC - ITC BSD Foodcourt', Decimal('79600'))]}
+2025-11-08 14:50:57 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:51:13 - INFO - Loading PostgreSQL connection...
+2025-11-08 14:51:13 - INFO - Connection completed.
+2025-11-08 14:53:37 - INFO - Extracting receipt data...
+2025-11-08 14:53:43 - INFO - Extracted data: {'merchant_details': {'name': "ROTI'O STASIUN TANAH ABANG EKS. CORNER", 'address': None, 'phone_number': None}, 'transaction_details': {'date': '2025-11-05', 'time': None, 'receipt_number': 'AG5KECRFYCW'}, 'line_items': [{'item_name': 'ICED CHOCOLATE 16 OZ', 'quantity': 1, 'unit_price': 23000.0, 'total_price': 23000.0}], 'cost_summary': {'subtotal': 23000.0, 'total_taxes_and_fees': 0.0, 'total_discount': 0.0, 'grand_total': 23000.0}}
+2025-11-08 14:53:43 - INFO - Inserting receipt data to DB...
+2025-11-08 14:53:43 - INFO - Inserted receipt id: 45
+2025-11-08 14:53:43 - INFO - Extracting receipt data...
+2025-11-08 14:53:54 - INFO - Extracted data: {'merchant_details': {'name': 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', 'address': 'Jl. Griya Loka Raya (Bakso Loncat), Rawa Buntu...', 'phone_number': None}, 'transaction_details': {'date': '2025-11-05', 'time': '18:40:00', 'receipt_number': None}, 'line_items': [{'item_name': '#B1G1 Paket Jumbo Sei Sapi x Sei Sapi', 'quantity': 1, 'unit_price': 82680.0, 'total_price': 82680.0}], 'cost_summary': {'subtotal': 82680.0, 'total_taxes_and_fees': 26362.0, 'total_discount': 43072.0, 'grand_total': 60108.0}}
+2025-11-08 14:53:54 - INFO - Inserting receipt data to DB...
+2025-11-08 14:53:54 - INFO - Inserted receipt id: 46
+2025-11-08 14:53:54 - INFO - Extracting receipt data...
+2025-11-08 14:54:00 - INFO - Extracted data: {'merchant_details': {'name': 'KFC - BSD Square', 'address': None, 'phone_number': None}, 'transaction_details': {'date': '2025-09-12', 'time': '18:06:00', 'receipt_number': None}, 'line_items': [{'item_name': 'Triple Treat', 'quantity': 1, 'unit_price': 79500.0, 'total_price': 79500.0}], 'cost_summary': {'subtotal': 79500.0, 'total_taxes_and_fees': 19000.0, 'total_discount': 14000.0, 'grand_total': 84500.0}}
+2025-11-08 14:54:00 - INFO - Inserting receipt data to DB...
+2025-11-08 14:54:00 - INFO - Inserted receipt id: 47
+2025-11-08 14:54:00 - INFO - Extracting receipt data...
+2025-11-08 14:54:06 - INFO - Extracted data: {'merchant_details': {'name': 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', 'address': None, 'phone_number': None}, 'transaction_details': {'date': '2025-09-26', 'time': '17:53:00', 'receipt_number': None}, 'line_items': [{'item_name': '#B1G1 Paket Reguler Sei Sapi x Sei Sapi', 'quantity': 1, 'unit_price': 67200.0, 'total_price': 67200.0}], 'cost_summary': {'subtotal': 67200.0, 'total_taxes_and_fees': 25359.0, 'total_discount': 35000.0, 'grand_total': 52700.0}}
+2025-11-08 14:54:06 - INFO - Inserting receipt data to DB...
+2025-11-08 14:54:06 - INFO - Inserted receipt id: 48
+2025-11-08 14:54:06 - INFO - Extracting receipt data...
+2025-11-08 14:54:27 - INFO - Extracted data: {'merchant_details': {'name': 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', 'address': None, 'phone_number': None}, 'transaction_details': {'date': '2025-10-14', 'time': '18:33:00', 'receipt_number': 'GF-077'}, 'line_items': [{'item_name': '#B1G1 Paket Jumbo Sei Sapi x Sei Sapi', 'quantity': 1, 'unit_price': 82680.0, 'total_price': 82680.0}], 'cost_summary': {'subtotal': 82680.0, 'total_taxes_and_fees': 25500.0, 'total_discount': 43072.0, 'grand_total': 65108.0}}
+2025-11-08 14:54:27 - INFO - Inserting receipt data to DB...
+2025-11-08 14:54:27 - INFO - Inserted receipt id: 49
+2025-11-08 14:54:27 - INFO - Extracting receipt data...
+2025-11-08 14:54:36 - INFO - Extracted data: {'merchant_details': {'name': 'KFC - ITC BSD Foodcourt', 'address': 'ITC BSD, Food Court, Jl. Pahlawan Seribu Bsd...', 'phone_number': None}, 'transaction_details': {'date': '2025-09-19', 'time': '20:01:00', 'receipt_number': None}, 'line_items': [{'item_name': 'Triple Treat', 'quantity': 1, 'unit_price': 84500.0, 'total_price': 84500.0}], 'cost_summary': {'subtotal': 84500.0, 'total_taxes_and_fees': 22000.0, 'total_discount': 26900.0, 'grand_total': 79600.0}}
+2025-11-08 14:54:36 - INFO - Inserting receipt data to DB...
+2025-11-08 14:54:36 - INFO - Inserted receipt id: 50
+2025-11-08 14:54:36 - INFO - Extracting receipt data...
+2025-11-08 14:54:49 - INFO - Extracted data: {'merchant_details': {'name': 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu', 'address': 'Jl. Sumatra, Rawa Mekar Jaya, Serpong, Kota Tangerang Selatan', 'phone_number': None}, 'transaction_details': {'date': '2025-09-16', 'time': '20:17:00', 'receipt_number': None}, 'line_items': [{'item_name': '#B1G1 Paket Jumbo Sei Sapi x Sei Sapi', 'quantity': 1, 'unit_price': 82680.0, 'total_price': 82680.0}], 'cost_summary': {'subtotal': 82680.0, 'total_taxes_and_fees': 19500.0, 'total_discount': 35000.0, 'grand_total': 67180.0}}
+2025-11-08 14:54:49 - INFO - Inserting receipt data to DB...
+2025-11-08 14:54:49 - INFO - Inserted receipt id: 51
+2025-11-08 14:54:49 - INFO - Extracting receipt data...
+2025-11-08 14:54:55 - INFO - Extracted data: {'merchant_details': {'name': 'Totlah - Anggrek Loka', 'address': 'Jl. Anggrek Lokasi (Mitra Kuliner BSD), Rawa Bu... Jl. Sumatra, Rawa Mekar Jaya, Serpong, Kota T...', 'phone_number': None}, 'transaction_details': {'date': '2025-09-27', 'time': '13:55:00', 'receipt_number': 'A-8DSEOWIWX49UAV'}, 'line_items': [{'item_name': 'Nasi Wagyu Bakar Totlah (Favourite) Sambal Totlah (Favorit). Topping Kremesan', 'quantity': 1, 'unit_price': 61000.0, 'total_price': 61000.0}], 'cost_summary': {'subtotal': 61000.0, 'total_taxes_and_fees': 18800.0, 'total_discount': 40000.0, 'grand_total': 39800.0}}
+2025-11-08 14:54:55 - INFO - Inserting receipt data to DB...
+2025-11-08 14:54:55 - INFO - Inserted receipt id: 52
+2025-11-08 14:55:21 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:55:23 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT\n  ri.item_name,\n  ri.quantity,\n  ri.unit_price,\n  ri.total_price,\n  r.transaction_date,\n  r.merchant_name\nFROM receipt_items AS ri\nJOIN receipts AS r\n  ON ri.receipt_id = r.id\nWHERE\n  r.transaction_date >= CURRENT_DATE - INTERVAL '7 days'\nORDER BY\n  r.transaction_date DESC, r.transaction_time DESC;",
+  "language": "id"
+}```
+2025-11-08 14:55:23 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': "SELECT\n  ri.item_name,\n  ri.quantity,\n  ri.unit_price,\n  ri.total_price,\n  r.transaction_date,\n  r.merchant_name\nFROM receipt_items AS ri\nJOIN receipts AS r\n  ON ri.receipt_id = r.id\nWHERE\n  r.transaction_date >= CURRENT_DATE - INTERVAL '7 days'\nORDER BY\n  r.transaction_date DESC, r.transaction_time DESC;", 'language': 'id'}
+2025-11-08 14:55:23 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': '{\'action\': \'sql_query\', \'sql_query\': "SELECT\\n  ri.item_name,\\n  ri.quantity,\\n  ri.unit_price,\\n  ri.total_price,\\n  r.transaction_date,\\n  r.merchant_name\\nFROM receipt_items AS ri\\nJOIN receipts AS r\\n  ON ri.receipt_id = r.id\\nWHERE\\n  r.transaction_date >= CURRENT_DATE - INTERVAL \'7 days\'\\nORDER BY\\n  r.transaction_date DESC, r.transaction_time DESC;", \'language\': \'id\'}'}
+2025-11-08 14:55:23 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:55:23 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('ICED CHOCOLATE 16 OZ', 1, Decimal('23000'), Decimal('23000'), datetime.date(2025, 11, 5), "ROTI'O STASIUN TANAH ABANG EKS. CORNER"), ('#B1G1 Paket Jumbo Sei Sapi x Sei Sapi', 1, Decimal('82680'), Decimal('82680'), datetime.date(2025, 11, 5), 'SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu')]}
+2025-11-08 14:55:23 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:55:58 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:56:00 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT DISTINCT r.merchant_name FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;",
+  "language": "id"
+}
+```
+2025-11-08 14:56:00 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT DISTINCT r.merchant_name FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;', 'language': 'id'}
+2025-11-08 14:56:00 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT DISTINCT r.merchant_name FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;', 'language': 'id'}"}
+2025-11-08 14:56:00 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:56:00 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [('KFC - BSD Square',), ('KFC - ITC BSD Foodcourt',), ('SeIndonesia (Sei Sapi dan Ayam) - Rawa Buntu',), ('Totlah - Anggrek Loka',)]}
+2025-11-08 14:56:00 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:56:40 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:56:42 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT SUM(r.grand_total) AS total_spent_in_september\nFROM receipts AS r\nWHERE EXTRACT(MONTH FROM r.transaction_date) = 9\n  AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);",
+  "language": "english"
+}```
+2025-11-08 14:56:42 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) AS total_spent_in_september\nFROM receipts AS r\nWHERE EXTRACT(MONTH FROM r.transaction_date) = 9\n  AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);', 'language': 'english'}
+2025-11-08 14:56:42 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) AS total_spent_in_september\\nFROM receipts AS r\\nWHERE EXTRACT(MONTH FROM r.transaction_date) = 9\\n  AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);', 'language': 'english'}"}
+2025-11-08 14:56:42 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:56:42 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [(Decimal('323780'),)]}
+2025-11-08 14:56:42 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:57:46 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:57:50 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT SUM(r.grand_total) FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;",
+  "language": "english"
+}
+```
+2025-11-08 14:57:50 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;', 'language': 'english'}
+2025-11-08 14:57:50 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) FROM receipts AS r WHERE EXTRACT(MONTH FROM r.transaction_date) = 9;', 'language': 'english'}"}
+2025-11-08 14:57:50 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:57:50 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [(Decimal('323780'),)]}
+2025-11-08 14:57:50 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
+2025-11-08 14:58:13 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query'}
+2025-11-08 14:58:15 - INFO - Generate SQL query result: ```json
+{
+  "action": "sql_query",
+  "sql_query": "SELECT SUM(r.grand_total) AS total_spent_in_october\nFROM receipts AS r\nWHERE EXTRACT(MONTH FROM r.transaction_date) = 10\n  AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);",
+  "language": "english"
+}
+```
+2025-11-08 14:58:15 - INFO - Generate SQL query result: {'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) AS total_spent_in_october\nFROM receipts AS r\nWHERE EXTRACT(MONTH FROM r.transaction_date) = 10\n  AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);', 'language': 'english'}
+2025-11-08 14:58:15 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'generate_sql_query', 'result': "{'action': 'sql_query', 'sql_query': 'SELECT SUM(r.grand_total) AS total_spent_in_october\\nFROM receipts AS r\\nWHERE EXTRACT(MONTH FROM r.transaction_date) = 10\\n  AND EXTRACT(YEAR FROM r.transaction_date) = EXTRACT(YEAR FROM CURRENT_DATE);', 'language': 'english'}"}
+2025-11-08 14:58:15 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query'}
+2025-11-08 14:58:15 - INFO - Currently running process: {'agent_name': 'aibon_agent', 'activity_status': 'execute_sql_query', 'execution_result': [(Decimal('65108'),)]}
+2025-11-08 14:58:15 - INFO - Currently running process: {'agent_name': 'jarvis_agent', 'activity_status': 'formulate_response'}
