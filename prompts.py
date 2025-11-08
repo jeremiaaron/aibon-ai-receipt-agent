@@ -9,6 +9,7 @@ Core Extraction Rules:
 - total_discount: Sum all distinct discounts or negative charges. The final value in the JSON should be represented as a single positive number.
 - Indonesian Number Format: Correctly parse Indonesian monetary values. A period (.) is a thousands separator, not a decimal. (e.g., Rp82.680 becomes the number 82680.0).
 3. Handle Missing Information: If a specific detail is not visible or cannot be determined from the receipt, use null as the value for that key.
+4. Receipt Date Format: The date is formatted for Indonesian date, meaning it is typically in the format of DD-MM-YYYY or DD/MM/YYYY
 4. Strict Adherence to Schema: Do not add or remove fields from the JSON schema below.
 
 Strict Output JSON Schema:
